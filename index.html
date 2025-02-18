@@ -5,7 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Buckle Up For Hell</title>
     <script src="https://protectionplus--staging.sandbox.lightning.force.com/lightning/lightning.out.js"></script>
-    <script src="script.js" defer></script>
+    <div id="lightning"></div>
+    <script>
+      $Lightning.use(
+        "c:myButtonApp",
+        function () {
+          $Lightning.createComponent(
+            "c:myButtonComponent",
+            {},
+            "lightning",
+            function (cmp) {
+              console.log("Button component created");
+            }
+          );
+        },
+        "https://protectionplus--staging.sandbox.my.salesforce.com"
+      );
+    </script>
   </head>
   <body>
     <h1>Welcome to Buckle Up For Hell</h1>
