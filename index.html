@@ -1,17 +1,24 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Buckle Up For Hell</title>
-    <script src="https://protectionplus--staging.sandbox.lightning.force.com/lightning/lightning.out.js"></script>
+  </head>
+  <body>
+    <h1>Welcome to Buckle Up For Hell</h1>
+    <p id="message">Click the button to start your journey!</p>
+    <button id="startButton">Click to Buckle Up</button>
     <div id="lightning"></div>
+
+    <script src="https://protectionplus--staging.sandbox.lightning.force.com/lightning/lightning.out.js"></script>
     <script>
       $Lightning.use(
-        "c:myButtonApp",
+        "c:TestApplication", // Use the name of your Lightning app
         function () {
           $Lightning.createComponent(
-            "c:myButtonComponent",
+            "c:TestComponent", // Use the name of your Lightning component
             {},
             "lightning",
             function (cmp) {
@@ -22,11 +29,5 @@
         "https://protectionplus--staging.sandbox.my.salesforce.com"
       );
     </script>
-  </head>
-  <body>
-    <h1>Welcome to Buckle Up For Hell</h1>
-    <p id="message">Click the button to start your journey!</p>
-    <button id="startButton">Click to Buckle Up</button>
-    <div id="lightning-container"></div>
   </body>
 </html>
